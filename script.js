@@ -58,10 +58,22 @@ function next() {
         choices.setAttribute('style', 'display:flex');
 
     } else {
+        var userScore = prompt("Please input your initials!")
+        if (userScore.length!=2) {
+            alert("Please enter your first & last initial only!")
+            next();
+        } else {
+            localStorage.setItem("Initials",userScore)
+        }
         currentScore = timeLeft + 1
-        localStorage.setItem(currentScore)
+        localStorage.setItem("Top Scores",currentScore)
         console.log(currentScore)
         clearInterval(timeInterval)
+        quizPrompts.setAttribute('style', 'display:none');
+        quizQuestion.setAttribute('style', 'display:none');
+        choices.setAttribute('style', 'display:none');
+        startBtn.setAttribute('style', 'display:flex');
+        timerEl.setAttribute('style','display:none;')
     }
 }
 var timeInterval = ''
@@ -120,6 +132,7 @@ choices.addEventListener("click", function (event) {
 // Store local high scores
 highBtn.addEventListener("click", function () {
     console.log("I've been clicked")
-    
+    var leaderboard = [localStorage.getItem("Top Score")]
+    leaderboard = document.createElement('<li>')
 })
 
