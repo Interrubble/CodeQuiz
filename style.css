@@ -1,0 +1,50 @@
+body {
+    background-image: url(https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/07/joey-wheeler-and-yugi-duelist-kingdom.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: skyblue;
+    background-origin: padding-box;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.ygo {
+    text-align: center;
+    font-size: xx-large;
+    color: rgb(2, 3, 1);
+    font-weight: bolder;
+    text-shadow: 0 0 10px crimson, 0 0 10px crimson, 0 0 10px crimson;
+    padding-bottom: 100px;
+}
+
+.quiz {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.start {
+    background-color: crimson;
+    border-radius: 30px;
+    size-adjust: 30px;
+    transform: scale(2);
+    display: flex;
+}
+
+#question {
+    display: none;
+}
+
+#opt1, #opt2, #opt3, #opt4 {
+    list-style-type: none;
+    border: 2px solid black;
+    padding: 3px;
+    border-radius: 30px;
+    display: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
